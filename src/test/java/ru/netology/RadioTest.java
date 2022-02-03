@@ -10,45 +10,67 @@ class RadioTest {
     @Test
     public void NextStation() {
         Radio radio = new Radio();
-        for (int i = 0; i == 9; i++) {
+        for (int i = 0; i < 10; i++) {
             radio.nextStation();
         }
     }
 
-
     @Test
     public void PrevStation() {
         Radio radio = new Radio();
-        for (int i = 9; i == 0; i = i - 1) {
+        for (int i = 9; i >= 0; i = i - 1) {
             radio.prevStation();
         }
     }
 
-
     @Test
     public void SetStation() {
-        int[] currentState = {0, 1, 5, 8, 9, 10,11};
+        int[] currentState = {0, 1, 5, 8, 9, 10, 11, -1};
         Radio radio = new Radio();
         for (int station : currentState) {
             radio.setCurrentStation(station);
         }
     }
 
-
     @Test
     public void IncreaseVolume() {
         Radio radio = new Radio();
-        for (int i = 0; i == 10; i++) {
-            radio.insreaseVolume();
+        for (int i = 0; i >= 10; i++) {
+            radio.increaseVolume();
         }
     }
 
     @Test
     public void DecreaseVolume() {
         Radio radio = new Radio();
-        for (int i = 10; i == 0; i = i - 1) {
-            radio.desreaseVolume();
+        for (int i = 10; i >= 0; i = i - 1) {
+            radio.decreaseVolume();
         }
     }
+
+     /*
+    @Test
+    public void RadioTestAllInOne () {
+        int[] currentState = {0, 1, 5, 8, 9, 10,11, -1};
+        Radio radio = new Radio();
+
+        for (int i = 0; i < 10 ; i++) {
+            radio.nextStation();
+        }
+        for (int i = 9; i >= 0; i = i - 1) {
+            radio.prevStation();
+        }
+        for (int i = 0; i < 12; i++) {
+            radio.increaseVolume();
+        }
+        for (int i = 10; i >= 0; i = i - 1) {
+            radio.decreaseVolume();
+        }
+        for (int station : currentState) {
+            radio.setCurrentStation(station);
+        }
+
+    }
+    */
 
 }
