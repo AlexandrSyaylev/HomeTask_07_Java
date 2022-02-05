@@ -18,7 +18,7 @@ class RadioTest {
     @Test
     public void PrevStation() {
         Radio radio = new Radio();
-        for (int i = 0; i >= 9; i++) {
+        for (int i = 9; i >= 0; i=i-1) {
             radio.prevStation();
         }
     }

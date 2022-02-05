@@ -18,8 +18,10 @@ public class Radio {
     }
 
     public void setCurrentStation(int currentStation) {
-        if (currentStation >= 0 & currentStation < 10) {
-            this.currentStation = currentStation;
+        if (currentStation >= 0) {
+            if (currentStation < 10) {
+                this.currentStation = currentStation;
+            }
         }
     }
 
