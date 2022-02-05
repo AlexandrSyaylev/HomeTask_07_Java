@@ -1,8 +1,8 @@
 package ru.netology;
 
 public class Radio {
-    int currentVolume = 0;
-    int currentStation = 0;
+    int currentVolume = 5;
+    int currentStation = 5;
 
     public void nextStation() {
         currentStation++;
@@ -18,7 +18,7 @@ public class Radio {
     }
 
     public void setCurrentStation(int currentStation) {
-        if (currentStation >= 0 & currentStation <= 10) {
+        if (currentStation >= 0 & currentStation < 10) {
             this.currentStation = currentStation;
         }
     }
